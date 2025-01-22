@@ -1,0 +1,27 @@
+.header {
+    background-color: rgb(9, 245, 88);
+    padding: 100px 0;
+    font-size: 32px;
+    text-align: center;
+
+    @media screen {
+        background-color: rgba(51, 247, 3, 0.568);
+    }
+}
+
+
+.box {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 25%;
+    }
+}

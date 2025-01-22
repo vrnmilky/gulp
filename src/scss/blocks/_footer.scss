@@ -1,0 +1,14 @@
+$color-bg: rgb(241, 7, 171);
+
+.footer {
+    background-color: rgb(67, 99, 107);
+    padding: 100px 0;
+    font-size: 32px;
+    text-align: center;
+
+
+    @media screen {
+        background-color: rgb(241, 8, 229);
+    }
+}
+

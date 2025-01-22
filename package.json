@@ -1,0 +1,30 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "autoprefixer": "^10.4.20",
+    "css-loader": "^7.1.2",
+    "cssnano": "^7.0.6",
+    "del": "^8.0.0",
+    "glob": "^11.0.1",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^5.0.2",
+    "gulp-debug": "^5.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss-sort-media-queries": "^5.2.0",
+    "sass": "^1.83.4",
+    "style-loader": "^4.0.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "presets": [
+    "@babel/preset-env"
+  ]
+}
