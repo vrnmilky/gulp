@@ -235,9 +235,9 @@ function watchDev() {
     watch(paths.styles.blocks, { events: ['add', 'unlink'] }, globUse)
     watch(paths.styles.src, stylesDev);
     watch(paths.scripts.src, scriptsDev);
-    watch(paths.images.src, imgDev);
-    watch(paths.files.src, filesDev);
-    watch(paths.fonts.src, fontsDev);
+    watch(paths.images.path, imgDev);
+    watch(paths.files.path, filesDev);
+    watch(paths.fonts.path, fontsDev);
 }
 
 function watchProd() {
