@@ -1,10 +1,9 @@
 /* Base */
-@use "./base/reset" as reset;
-@use "./base/vars" as vars;
-@use "./base/base" as base;
-@use "./base/utils" as utils;
-@use "./base/containers" as containers;
-@use "./base/sticky-footer" as sticky;
+@use "./base/reset";
+@use "./base/vars";
+@use "./base/base";
+@use "./base/utils";
+@use "./base/containers";
 
 
-@use '_imports';
+// @use '_imports';

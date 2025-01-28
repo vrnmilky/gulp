@@ -10,7 +10,6 @@
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-changed": "^5.0.2",
-    "gulp-debug": "^5.0.1",
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-notify": "^5.0.0",

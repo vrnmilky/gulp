@@ -4,7 +4,6 @@ import { deleteAsync as del } from 'del';
 import imagemin from 'gulp-imagemin';
 import changed from 'gulp-changed';
 // 
-import debug from 'gulp-debug';
 //sass
 import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass';
@@ -50,16 +49,19 @@ const paths = {
         docs: './docs/js/',
     },
     images: {
-        src: './src/img/**/*.{jpg,jpeg,png}',
+        path: './src/img',
+        src: './src/img/**/*',
         dev: './build/img/',
         docs: './docs/img/',
     },
     fonts: {
+        path: './src/fonts',
         src: './src/fonts/**/*',
         dev: './build/fonts/',
         docs: './docs/fonts/',
     },
     files: {
+        path: './src/files',
         src: './src/files/**/*',
         dev: './build/files/',
         docs: './docs/files/',
@@ -157,24 +159,46 @@ function scripts(mode) {
 
 
 function images(mode) {
+    if (!fs.existsSync(paths.images.path)) {
+        console.warn(`Директория ${paths.images.path} не найдена, пропускаем задачу...`);
+        return Promise.resolve(); 
+    }
+
     return src(paths.images.src, { encoding: false })
         .pipe(changed(mode))
-        .pipe(debug({ title: 'Processing file:', showFiles: true }))
         .pipe(imagemin())
-        .pipe(dest(mode));
+        .pipe(dest(mode)); 
 }
+
+
 function fonts(mode) {
+    if (!fs.existsSync(paths.fonts.path)) {
+        console.warn(`Директория ${paths.fonts.path} не найдена, пропускаем задачу...`);
+        return Promise.resolve(); 
+    }
+
     return src(paths.fonts.src, { encoding: false })
         .pipe(changed(mode))
-        .pipe(debug({ title: 'Processing file:', showFiles: true }))
-        .pipe(dest(mode));
+        .pipe(imagemin())
+        .pipe(dest(mode)); 
 }
+
+
+
+
 function files(mode) {
+    if (!fs.existsSync(paths.files.path)) {
+        console.warn(`Директория ${paths.files.path} не найдена, пропускаем задачу...`);
+        return Promise.resolve(); 
+    }
+
     return src(paths.files.src, { encoding: false })
         .pipe(changed(mode))
-        .pipe(debug({ title: 'Processing file:', showFiles: true }))
-        .pipe(dest(mode));
+        .pipe(imagemin())
+        .pipe(dest(mode)); 
 }
+
+
 
 
 function globUse(done) {
